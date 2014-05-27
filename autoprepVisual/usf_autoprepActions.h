@@ -14,8 +14,4 @@
     NSString* fdePath;
 }
 
-- ldPath;
-- mpPath;
-- fdePath;
-
 @end

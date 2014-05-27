@@ -10,4 +10,8 @@
 
 @implementation usf_autoprepActions
 
+NSString* ldPath;
+NSString* mpPath;
+NSString* fdePath;
+
 @end

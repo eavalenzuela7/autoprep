@@ -17,7 +17,11 @@
 @property (weak) IBOutlet NSButton *chkbx_fdeEnableDone;
 @property (weak) IBOutlet NSTextField *txt_compName;
 @property (weak) IBOutlet NSTextField *txt_adminName;
+@property (weak) IBOutlet NSLevelIndicator *progbar_completion;
+@property (weak) IBOutlet NSSegmentedControl *slctbar_infoBoxControl;
+@property (weak) IBOutlet NSScrollView *txtBox_infoWindow;
 
+- (IBAction)slctbar_chooseBox:(id)sender;
 - (IBAction)applyname:(id)sender;
 - (IBAction)addAdmin:(id)sender;
 - (IBAction)ldinstall:(id)sender;

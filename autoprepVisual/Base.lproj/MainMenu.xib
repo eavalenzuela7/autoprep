@@ -24,6 +24,9 @@
                 <outlet property="chkbx_mpInstalled" destination="SGI-7x-74A" id="LjP-Gt-8HP"/>
                 <outlet property="chkbx_sysUpdatesDone" destination="QNN-Fd-Rlf" id="G5W-x1-7xw"/>
                 <outlet property="compName" destination="lHW-nb-985" id="tLU-eP-hWC"/>
+                <outlet property="progbar_completion" destination="UEG-mq-zlX" id="WxC-Lz-wEb"/>
+                <outlet property="slctbar_infoBoxControl" destination="YG1-gR-tO3" id="iXa-uA-2w1"/>
+                <outlet property="txtBox_infoWindow" destination="zrI-q4-76V" id="ygN-Zk-qgy"/>
                 <outlet property="txt_adminName" destination="NFi-vh-Xkh" id="CRG-6T-3Ia"/>
                 <outlet property="txt_compName" destination="lHW-nb-985" id="9Pa-sK-2NA"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
@@ -188,14 +191,14 @@
         </menu>
         <window title="USF Autoprep" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" appearanceType="aqua" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="335" y="390" width="250" height="252"/>
+            <rect key="contentRect" x="335" y="390" width="490" height="264"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="250" height="252"/>
+                <rect key="frame" x="0.0" y="0.0" width="490" height="264"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHW-nb-985">
-                        <rect key="frame" x="20" y="210" width="134" height="22"/>
+                        <rect key="frame" x="18" y="222" width="134" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Computer Name" drawsBackground="YES" id="8yV-5C-1iS">
                             <font key="font" metaFont="cellTitle"/>
@@ -204,7 +207,7 @@
                         </textFieldCell>
                     </textField>
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iY-RI-tbG">
-                        <rect key="frame" x="156" y="204" width="82" height="32"/>
+                        <rect key="frame" x="154" y="216" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5fm-lY-2BJ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -215,7 +218,7 @@
                         </connections>
                     </button>
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUM-06-jZy">
-                        <rect key="frame" x="14" y="142" width="146" height="32"/>
+                        <rect key="frame" x="12" y="154" width="146" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="LANDesk" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TSI-Z9-RS9">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -226,7 +229,7 @@
                         </connections>
                     </button>
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cH2-Mk-peb">
-                        <rect key="frame" x="14" y="109" width="146" height="32"/>
+                        <rect key="frame" x="12" y="121" width="146" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="MozyPro" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g00-y2-EY0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -237,7 +240,7 @@
                         </connections>
                     </button>
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="99a-B9-bai">
-                        <rect key="frame" x="14" y="76" width="146" height="32"/>
+                        <rect key="frame" x="12" y="88" width="146" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Apple Updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZBv-mh-qhH">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -248,7 +251,7 @@
                         </connections>
                     </button>
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YpW-Bj-I3f">
-                        <rect key="frame" x="14" y="43" width="146" height="32"/>
+                        <rect key="frame" x="12" y="55" width="146" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Enable FileVault" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oCu-9K-mj6">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -259,7 +262,7 @@
                         </connections>
                     </button>
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cq8-Fe-sK5">
-                        <rect key="frame" x="160" y="151" width="84" height="18"/>
+                        <rect key="frame" x="158" y="163" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Installed" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="Vik-BH-47Y">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -267,7 +270,7 @@
                         </buttonCell>
                     </button>
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-7x-74A">
-                        <rect key="frame" x="160" y="118" width="84" height="18"/>
+                        <rect key="frame" x="158" y="130" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Installed" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="utG-ww-pVQ">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -275,7 +278,7 @@
                         </buttonCell>
                     </button>
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNN-Fd-Rlf">
-                        <rect key="frame" x="160" y="85" width="84" height="18"/>
+                        <rect key="frame" x="158" y="97" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Done" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="TYw-hn-jvk">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -283,7 +286,7 @@
                         </buttonCell>
                     </button>
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-GR-YB3">
-                        <rect key="frame" x="14" y="10" width="146" height="32"/>
+                        <rect key="frame" x="12" y="22" width="146" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Restart" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cot-KK-XMD">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -294,7 +297,7 @@
                         </connections>
                     </button>
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVN-4f-WTP">
-                        <rect key="frame" x="160" y="52" width="84" height="18"/>
+                        <rect key="frame" x="158" y="64" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Done" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="osy-pU-hqL">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -302,16 +305,16 @@
                         </buttonCell>
                     </button>
                     <textField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFi-vh-Xkh">
-                        <rect key="frame" x="20" y="178" width="134" height="22"/>
+                        <rect key="frame" x="18" y="190" width="134" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Add Administrators" drawsBackground="YES" id="f1E-C1-Bgc">
-                            <font key="font" metaFont="titleBar" size="12"/>
+                            <font key="font" metaFont="cellTitle"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="smN-3n-6sW">
-                        <rect key="frame" x="156" y="172" width="82" height="32"/>
+                        <rect key="frame" x="154" y="184" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kpy-Sr-DcJ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -321,6 +324,62 @@
                             <action selector="addAdmin:" target="Voe-Tx-rLC" id="HWu-e9-MZw"/>
                         </connections>
                     </button>
+                    <box autoresizesSubviews="NO" appearanceType="aqua" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="TkU-kM-Qd6">
+                        <rect key="frame" x="243" y="12" width="5" height="240"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                    <levelIndicator appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEG-mq-zlX">
+                        <rect key="frame" x="160" y="29" width="70" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="5" criticalValue="2" id="91g-pR-F20"/>
+                    </levelIndicator>
+                    <scrollView appearanceType="aqua" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-q4-76V">
+                        <rect key="frame" x="260" y="84" width="216" height="128"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="8a7-g2-zee">
+                            <rect key="frame" x="1" y="1" width="199" height="126"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="MgE-dl-UO7">
+                                    <rect key="frame" x="0.0" y="0.0" width="199" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="199" height="126"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="199" height="126"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="4Cb-2k-XKp">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1b1-Jy-ZzU">
+                            <rect key="frame" x="200" y="1" width="15" height="126"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <segmentedControl appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YG1-gR-tO3">
+                        <rect key="frame" x="258" y="222" width="220" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="edk-xj-ihy">
+                            <font key="font" metaFont="system" size="10"/>
+                            <segments>
+                                <segment label="Comp Info" width="71" selected="YES"/>
+                                <segment label="Admin List" width="71" tag="1"/>
+                                <segment label="SW Versions" width="70"/>
+                            </segments>
+                        </segmentedCell>
+                        <connections>
+                            <action selector="slctbar_chooseBox:" target="Voe-Tx-rLC" id="8Bo-6s-5TQ"/>
+                        </connections>
+                    </segmentedControl>
                 </subviews>
             </view>
         </window>

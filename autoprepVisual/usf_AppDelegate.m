@@ -16,6 +16,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
 }
 
+- (IBAction)slctbar_chooseBox:(id)sender {
+}
+
 - (IBAction)applyname:(id)sender {
     
     NSString *compName = [_txt_compName stringValue];

@@ -18,8 +18,6 @@
 		DB71E36B192FCA8100213088 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB71E34A192FCA8100213088 /* Cocoa.framework */; };
 		DB71E373192FCA8200213088 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB71E371192FCA8200213088 /* InfoPlist.strings */; };
 		DB71E375192FCA8200213088 /* autoprepVisualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71E374192FCA8200213088 /* autoprepVisualTests.m */; };
-		DB71E380192FF9D100213088 /* usf_autoprepActions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71E37F192FF9D100213088 /* usf_autoprepActions.m */; };
-		DB728BFB193E3919003A2B9D /* usf_autoprepAuthServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB728BFA193E3919003A2B9D /* usf_autoprepAuthServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +50,6 @@
 		DB71E370192FCA8200213088 /* autoprepVisualTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "autoprepVisualTests-Info.plist"; sourceTree = "<group>"; };
 		DB71E372192FCA8200213088 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB71E374192FCA8200213088 /* autoprepVisualTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = autoprepVisualTests.m; sourceTree = "<group>"; };
-		DB71E37E192FF9D100213088 /* usf_autoprepActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usf_autoprepActions.h; sourceTree = "<group>"; };
-		DB71E37F192FF9D100213088 /* usf_autoprepActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = usf_autoprepActions.m; sourceTree = "<group>"; };
-		DB728BF9193E3919003A2B9D /* usf_autoprepAuthServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usf_autoprepAuthServices.h; sourceTree = "<group>"; };
-		DB728BFA193E3919003A2B9D /* usf_autoprepAuthServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = usf_autoprepAuthServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +115,7 @@
 		DB71E350192FCA8100213088 /* autoprepVisual */ = {
 			isa = PBXGroup;
 			children = (
-				DB71E37E192FF9D100213088 /* usf_autoprepActions.h */,
-				DB71E37F192FF9D100213088 /* usf_autoprepActions.m */,
 				DB71E35C192FCA8100213088 /* usf_AppDelegate.h */,
-				DB728BF9193E3919003A2B9D /* usf_autoprepAuthServices.h */,
-				DB728BFA193E3919003A2B9D /* usf_autoprepAuthServices.m */,
 				DB71E35D192FCA8100213088 /* usf_AppDelegate.m */,
 				DB71E35F192FCA8100213088 /* MainMenu.xib */,
 				DB71E362192FCA8100213088 /* Images.xcassets */,
@@ -263,8 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB728BFB193E3919003A2B9D /* usf_autoprepAuthServices.m in Sources */,
-				DB71E380192FF9D100213088 /* usf_autoprepActions.m in Sources */,
 				DB71E357192FCA8100213088 /* main.m in Sources */,
 				DB71E35E192FCA8100213088 /* usf_AppDelegate.m in Sources */,
 			);

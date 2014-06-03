@@ -25,10 +25,11 @@
                 <outlet property="chkbx_sysUpdatesDone" destination="QNN-Fd-Rlf" id="G5W-x1-7xw"/>
                 <outlet property="compName" destination="lHW-nb-985" id="tLU-eP-hWC"/>
                 <outlet property="progbar_completion" destination="UEG-mq-zlX" id="WxC-Lz-wEb"/>
-                <outlet property="slctbar_infoBoxControl" destination="YG1-gR-tO3" id="iXa-uA-2w1"/>
-                <outlet property="txtBox_infoWindow" destination="zrI-q4-76V" id="ygN-Zk-qgy"/>
                 <outlet property="txt_adminName" destination="NFi-vh-Xkh" id="CRG-6T-3Ia"/>
                 <outlet property="txt_compName" destination="lHW-nb-985" id="9Pa-sK-2NA"/>
+                <outlet property="txt_connectPW" destination="vfW-r6-Gk0" id="fwF-W0-5XU"/>
+                <outlet property="txt_connectUN" destination="nCb-zz-J3B" id="iE5-vt-wiS"/>
+                <outlet property="txt_protechPW" destination="0bO-c0-0rC" id="pEQ-wK-Vkv"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -288,7 +289,7 @@
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-GR-YB3">
                         <rect key="frame" x="12" y="22" width="146" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Restart" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cot-KK-XMD">
+                        <buttonCell key="cell" type="push" title="Restart" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cot-KK-XMD">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -336,50 +337,68 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <levelIndicatorCell key="cell" alignment="left" maxValue="5" criticalValue="2" id="91g-pR-F20"/>
                     </levelIndicator>
-                    <scrollView appearanceType="aqua" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-q4-76V">
-                        <rect key="frame" x="260" y="84" width="216" height="128"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="8a7-g2-zee">
-                            <rect key="frame" x="1" y="1" width="199" height="126"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="MgE-dl-UO7">
-                                    <rect key="frame" x="0.0" y="0.0" width="199" height="126"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="199" height="126"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
-                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="199" height="126"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
-                                </textView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="4Cb-2k-XKp">
-                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1b1-Jy-ZzU">
-                            <rect key="frame" x="200" y="1" width="15" height="126"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
-                    <segmentedControl appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YG1-gR-tO3">
-                        <rect key="frame" x="258" y="222" width="220" height="24"/>
+                    <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-oP-TKr">
+                        <rect key="frame" x="402" y="216" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="edk-xj-ihy">
-                            <font key="font" metaFont="system" size="10"/>
-                            <segments>
-                                <segment label="Comp Info" width="71" selected="YES"/>
-                                <segment label="Admin List" width="71" tag="1"/>
-                                <segment label="SW Versions" width="70"/>
-                            </segments>
-                        </segmentedCell>
+                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kOI-AO-1MQ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
                         <connections>
-                            <action selector="slctbar_chooseBox:" target="Voe-Tx-rLC" id="8Bo-6s-5TQ"/>
+                            <action selector="submitProtechPW:" target="Voe-Tx-rLC" id="ikk-rh-azS"/>
                         </connections>
-                    </segmentedControl>
+                    </button>
+                    <secureTextField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bO-c0-0rC">
+                        <rect key="frame" x="261" y="222" width="138" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Protech Password" drawsBackground="YES" usesSingleLineMode="YES" id="NnN-lB-eLY">
+                            <font key="font" metaFont="cellTitle"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                    <textField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCb-zz-J3B">
+                        <rect key="frame" x="261" y="165" width="138" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="USFConnect Username" drawsBackground="YES" id="4Th-mg-A78">
+                            <font key="font" metaFont="cellTitle"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <secureTextField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfW-r6-Gk0">
+                        <rect key="frame" x="261" y="133" width="138" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Admin Password" drawsBackground="YES" usesSingleLineMode="YES" id="hiY-v7-hlE">
+                            <font key="font" metaFont="titleBar" size="12"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                    <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgF-gX-uB7">
+                        <rect key="frame" x="401" y="127" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8oF-VG-Xl5">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="submitConnectInfo:" target="Voe-Tx-rLC" id="FGy-K7-VKT"/>
+                        </connections>
+                    </button>
+                    <box autoresizesSubviews="NO" appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ldj-jX-Di1">
+                        <rect key="frame" x="254" y="200" width="224" height="5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
                 </subviews>
             </view>
         </window>

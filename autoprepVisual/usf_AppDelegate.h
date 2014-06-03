@@ -18,10 +18,10 @@
 @property (weak) IBOutlet NSTextField *txt_compName;
 @property (weak) IBOutlet NSTextField *txt_adminName;
 @property (weak) IBOutlet NSLevelIndicator *progbar_completion;
-@property (weak) IBOutlet NSSegmentedControl *slctbar_infoBoxControl;
-@property (weak) IBOutlet NSScrollView *txtBox_infoWindow;
+@property (weak) IBOutlet NSSecureTextField *txt_protechPW;
+@property (weak) IBOutlet NSTextField *txt_connectUN;
+@property (weak) IBOutlet NSSecureTextField *txt_connectPW;
 
-- (IBAction)slctbar_chooseBox:(id)sender;
 - (IBAction)applyname:(id)sender;
 - (IBAction)addAdmin:(id)sender;
 - (IBAction)ldinstall:(id)sender;
@@ -29,5 +29,7 @@
 - (IBAction)sysupdates:(id)sender;
 - (IBAction)fdeenable:(id)sender;
 - (IBAction)machinerestart:(id)sender;
+- (IBAction)submitProtechPW:(id)sender;
+- (IBAction)submitConnectInfo:(id)sender;
 
 @end

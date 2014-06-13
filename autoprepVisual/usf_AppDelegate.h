@@ -21,6 +21,9 @@
 @property (weak) IBOutlet NSSecureTextField *txt_protechPW;
 @property (weak) IBOutlet NSTextField *txt_connectUN;
 @property (weak) IBOutlet NSSecureTextField *txt_connectPW;
+@property (weak) IBOutlet NSTextField *logField;
+@property (weak) IBOutlet NSButton *btn_restart;
+
 
 - (IBAction)applyname:(id)sender;
 - (IBAction)addAdmin:(id)sender;

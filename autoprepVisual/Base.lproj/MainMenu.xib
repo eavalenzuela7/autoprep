@@ -18,12 +18,14 @@
                 <outlet property="btn_landesk" destination="BUM-06-jZy" id="MzJ-5o-AfV"/>
                 <outlet property="btn_mozypro" destination="cH2-Mk-peb" id="h6d-Qw-vmH"/>
                 <outlet property="btn_pcName" destination="9iY-RI-tbG" id="DRm-VL-hMP"/>
+                <outlet property="btn_restart" destination="Ldx-GR-YB3" id="FAo-Up-mId"/>
                 <outlet property="btn_restartpc" destination="Ldx-GR-YB3" id="lgg-L8-HeT"/>
                 <outlet property="chkbx_fdeEnableDone" destination="IVN-4f-WTP" id="FpS-Vk-RdW"/>
                 <outlet property="chkbx_ldInstalled" destination="Cq8-Fe-sK5" id="3FO-wq-eOa"/>
                 <outlet property="chkbx_mpInstalled" destination="SGI-7x-74A" id="LjP-Gt-8HP"/>
                 <outlet property="chkbx_sysUpdatesDone" destination="QNN-Fd-Rlf" id="G5W-x1-7xw"/>
                 <outlet property="compName" destination="lHW-nb-985" id="tLU-eP-hWC"/>
+                <outlet property="logField" destination="Kkm-p6-aRF" id="2Qb-C9-oKJ"/>
                 <outlet property="progbar_completion" destination="UEG-mq-zlX" id="WxC-Lz-wEb"/>
                 <outlet property="txt_adminName" destination="NFi-vh-Xkh" id="CRG-6T-3Ia"/>
                 <outlet property="txt_compName" destination="lHW-nb-985" id="9Pa-sK-2NA"/>
@@ -265,15 +267,18 @@
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cq8-Fe-sK5">
                         <rect key="frame" x="158" y="163" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Installed" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="Vik-BH-47Y">
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="Vik-BH-47Y">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="chkbx_setLDinstalled:" target="Voe-Tx-rLC" id="oQy-1x-y8y"/>
+                        </connections>
                     </button>
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-7x-74A">
                         <rect key="frame" x="158" y="130" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Installed" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="utG-ww-pVQ">
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="utG-ww-pVQ">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -281,7 +286,7 @@
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNN-Fd-Rlf">
                         <rect key="frame" x="158" y="97" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Done" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="TYw-hn-jvk">
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="TYw-hn-jvk">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -300,7 +305,7 @@
                     <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVN-4f-WTP">
                         <rect key="frame" x="158" y="64" width="84" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Done" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="osy-pU-hqL">
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="osy-pU-hqL">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -340,7 +345,7 @@
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-oP-TKr">
                         <rect key="frame" x="402" y="216" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kOI-AO-1MQ">
+                        <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kOI-AO-1MQ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -363,7 +368,7 @@
                     <textField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCb-zz-J3B">
                         <rect key="frame" x="261" y="165" width="138" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="USFConnect Username" drawsBackground="YES" id="4Th-mg-A78">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="USF Connect username" drawsBackground="YES" id="4Th-mg-A78">
                             <font key="font" metaFont="cellTitle"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -372,8 +377,8 @@
                     <secureTextField appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfW-r6-Gk0">
                         <rect key="frame" x="261" y="133" width="138" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Admin Password" drawsBackground="YES" usesSingleLineMode="YES" id="hiY-v7-hlE">
-                            <font key="font" metaFont="titleBar" size="12"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="password" drawsBackground="YES" usesSingleLineMode="YES" id="hiY-v7-hlE">
+                            <font key="font" metaFont="cellTitle"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <allowedInputSourceLocales>
@@ -384,7 +389,7 @@
                     <button appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgF-gX-uB7">
                         <rect key="frame" x="401" y="127" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8oF-VG-Xl5">
+                        <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8oF-VG-Xl5">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -399,6 +404,15 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
+                    <textField appearanceType="aqua" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkm-p6-aRF">
+                        <rect key="frame" x="261" y="20" width="209" height="98"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="qW2-0N-g7X">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>
